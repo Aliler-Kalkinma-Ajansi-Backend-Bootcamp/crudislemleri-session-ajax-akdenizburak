@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background-color:wheat">
-    @Html.Partial("_Header");
+<body>
+    <partial name="_Header.cshtml" />
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-    @Html.Partial("_Footer")
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
+        <partial name="_Footer.cshtml" />
 </body>
+
+
 </html>
